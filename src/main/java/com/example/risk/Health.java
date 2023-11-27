@@ -8,15 +8,16 @@ import javax.persistence.Id;
 @Entity
 public class Health {
 
-
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-
     private Integer id;
 
     private String patientName;
     private int bloodPressure;
     // Add other health-related fields as needed
+    // For example:
+    // private int heartRate;
+    // private double temperature;
 
     public Integer getId() {
         return id;
@@ -42,4 +43,21 @@ public class Health {
         this.bloodPressure = bloodPressure;
     }
 
-    // Add getters and setters for other fields
+    // Add getters and setters for other health-related fields
+    // For example:
+    // public int getHeartRate() {
+    //     return heartRate;
+    // }
+    //
+    // public void setHeartRate(int heartRate) {
+    //     this.heartRate = heartRate;
+    // }
+    //
+    // public double getTemperature() {
+    //     return temperature;
+    // }
+    //
+    // public void setTemperature(double temperature) {
+    //     this.temperature = temperature;
+    // }
+}
