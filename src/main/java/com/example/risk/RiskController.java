@@ -16,6 +16,11 @@ public class RiskController {
         this.riskService = riskService;
     }
 
+    @GetMapping(value="/")
+        public String getrisk() {
+                return "No risk" ;
+        }
+
     @PostMapping(value = "/calculate", consumes = MediaType.APPLICATION_JSON_VALUE,
             produces = MediaType.APPLICATION_JSON_VALUE)
     public Risk calculateRisk(@RequestBody Health health) {
