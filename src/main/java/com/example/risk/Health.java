@@ -7,8 +7,8 @@ import javax.persistence.Id;
 
 @Entity
 public class Health {
-	
-	
+
+
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
 
@@ -43,4 +43,3 @@ public class Health {
     }
 
     // Add getters and setters for other fields
-}
