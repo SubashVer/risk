@@ -16,14 +16,16 @@ public class RiskController {
         this.riskService = riskService;
     }
 
-    @GetMapping(value="/")
-        public String getrisk() {
-                return "No risk" ;
-        }
+    @GetMapping(value = "")
+    public String getRisk() {
+        return "No risk";
+    }
 
     @PostMapping(value = "/calculate", consumes = MediaType.APPLICATION_JSON_VALUE,
             produces = MediaType.APPLICATION_JSON_VALUE)
     public Risk calculateRisk(@RequestBody Health health) {
         return riskService.calculateRisk(health);
     }
+
+    // Add error handling if needed
 }
